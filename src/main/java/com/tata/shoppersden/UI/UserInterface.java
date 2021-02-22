@@ -104,7 +104,7 @@ public class UserInterface {
                                         break;
                                     }
                                     case 6: {
-                                        shoppingCartDaoImpl.pay();
+                                        shoppingCartDaoImpl = shoppingCartDaoImpl.pay();
                                         break;
                                     }
                                     case 7: {
