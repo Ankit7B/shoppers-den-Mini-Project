@@ -24,6 +24,8 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
         initialSave();
     }
 
+
+    // Deserialization of data to make shoppingcart object.
     public ShoppingCartDaoImpl(int cartId) {
         resourceBundle = ResourceBundle.getBundle("db");
         String getCartById = resourceBundle.getString("getcartbyid");
@@ -86,6 +88,7 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
         System.out.println(cart);
     }
 
+    // Serialization and initial save of cart to db.
     void initialSave() {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         ObjectOutputStream out = null;
@@ -113,6 +116,7 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
         }
     }
 
+    // Serialization and saving the cart to DB
     void saveState() {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         ObjectOutputStream out = null;
